@@ -37,6 +37,9 @@ body {
   height: 1.5em;
   fill: white;
 }
+.dashboard {
+  font-size: 2rem;
+}
 .sidebar-icon {
   display: grid;
   align-content: center;
@@ -97,6 +100,7 @@ input:focus {
   justify-content: end;
   justify-items: center;
   gap: 2em;
+  font-weight: bold;
 }
 .notification-bell img {
   height: 1.5em;
@@ -129,6 +133,7 @@ button {
   color: white;
   border: none;
   min-width: 8em;
+  font-weight: bold;
 }
 .main {
   display: grid;
@@ -146,9 +151,26 @@ button {
 }
 .article-item {
   background-color: white;
-  border-radius: 1rem;
+  border-radius: 8px;
   padding: 1rem;
-  border-left: 2px solid yellow;
+  background: linear-gradient(
+    to right,
+    orange,
+    orange 7px,
+    #ffffff 7px,
+    #ffffff 100%
+  );
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.article-item > div > p:first-child {
+  font-weight: bold;
+}
+.share {
+  justify-self: end;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 .trending {
   display: grid;
@@ -165,7 +187,7 @@ button {
 }
 .announcement-item {
   background-color: white;
-  border-radius: 1em;
+  border-radius: 8px;
   padding: 1rem;
   display: grid;
 
@@ -173,7 +195,7 @@ button {
 }
 .trending-item {
   background-color: white;
-  border-radius: 1em;
+  border-radius: 8px;
   padding: 1rem;
   display: grid;
   grid-auto-rows: 1fr;
@@ -183,6 +205,7 @@ button {
 .articles-container > p,
 .trending-container > p {
   font-weight: bold;
+  font-size: 1.2rem;
 }
 .announcement-container > p:first-child {
   font-weight: bold;
